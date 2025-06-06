@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container h1{
+    padding-left: 200px;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+.input-box {
+    background: white;
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.input-box h2{
+    font-size: 30px;
+    text-align: left;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 20px;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.input-container input {
+    width: 100%;
+    padding: 10px 40px 10px 10px; /* padding-right for icon space */
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.input-container i {
+    position: absolute;
+    right: 10px;
+    top: 70%;
+    transform: translateY(-50%);
+    color: #aaa; /* optional styling */
+    pointer-events: none; /* prevents icon from blocking input clicks */
+}
+
+.full-width-btn {
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+#sign-in{
+    background-color: rgb(95, 95, 227);
+    color: white;
+}
+
+.center-label {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+.signup-label {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.signup-label a {
+    text-decoration: none;
+    color: #007bff;
+}

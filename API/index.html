@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #e2eced;">
+    0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+</body>
+<script>
+    const requestUrl = 'https://api.restful-api.dev/objects';
+    const xhr = new XMLHttpRequest();
+
+    xhr.open('GET', requestUrl);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            const items = JSON.parse(this.responseText);
+
+            items.forEach(item => {
+                console.log("ID:", item.id);
+                console.log("Name:", item.name);
+
+                // Check if `data` exists
+                if (item.data) {
+                    console.log("Data:");
+
+                    // Iterate over keys in the `data` object
+                    for (let key in item.data) {
+                        console.log(`  ${key}: ${item.data[key]}`);
+                    }
+                } else {
+                    console.log("Data: null");
+                }
+
+                console.log("-----------------------------");
+            });
+        }
+    };
+
+    xhr.send();
+
+</script>
+</html>

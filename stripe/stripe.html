@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stripe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+    <h1>Stripe</h1>
+
+    <div class="input-box">
+        <h2>Sign in to your account</h2>
+
+        <div class="input-container">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+            <i class='bx bx-user'></i>
+        </div>
+
+        <div class="input-container">
+            <div class="label-row">
+                <label for="password">Password</label>
+                <a href="#">Forgot your password?</a>
+            </div>
+            <input type="password" name="password" id="password">
+            <i class='bx bx-lock-alt'></i>
+        </div>
+
+        <label>
+            <input type="checkbox"> Remember me on this device
+        </label>
+
+        <input type="button" value="Sign In" id="sign-in" class="full-width-btn">
+        <label class="center-label">OR</label>
+
+        <input type="button" value="Sign in with Google" class="full-width-btn">
+        <input type="button" value="Sign in with Passkey" class="full-width-btn">
+        <input type="button" value="Sign in with SSO" class="full-width-btn">
+
+        <label class="signup-label">
+            New to Stripe? <a href="#">Create account</a>
+        </label>
+    </div>
+</div>
+</body>
+</html>
